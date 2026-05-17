@@ -1,0 +1,36 @@
+ <!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>botgeneratorddd</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>🔐 Генератор паролей</h1>
+
+    <label>Длина пароля:</label>
+    <input type="range" id="length" min="4" max="20" value="10">
+    <span id="lengthValue">10</span>
+
+    <div class="options">
+        <label><input type="checkbox" id="letters" checked> Буквы (abc)</label><br>
+        <label><input type="checkbox" id="numbers" checked> Цифры (123)</label><br>
+        <label><input type="checkbox" id="symbols"> Символы (!@#)</label><br>
+    </div>
+
+    <button onclick="generatePassword()">Создать пароль</button>
+
+    <div class="result">
+        <input type="text" id="password" readonly>
+        <button onclick="copyPassword()">📋</button>
+    </div>
+
+    <p id="message"></p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
